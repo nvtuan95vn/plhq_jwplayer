@@ -1,7 +1,4 @@
-(window.webpackJsonpjwplayer = window.webpackJsonpjwplayer || []).push([[13], {
-  121: function (t, e, r) {
-    "use strict";
-    function HLS_Decrypt_AES_HEX(encryptedData, secret) {
+function HLS_Decrypt_AES_HEX(encryptedData, secret) {
       let data;
       try {
           let b64 = CryptoJS.enc.Hex.parse(encryptedData);
@@ -12,7 +9,10 @@
           console.log('Error decrypting data: ' + e)
       }
       return data;
-  };
+};
+(window.webpackJsonpjwplayer = window.webpackJsonpjwplayer || []).push([[13], {
+  121: function (t, e, r) {
+    "use strict";
     var i = r(84)
       , n = r(83)
       , s = {
@@ -19359,6 +19359,7 @@
                         this.callbacks = r,
                         this.retryDelay = e.retryDelay;
                       if (this.context.url.indexOf('/clencv1/') > 0) {
+                        console.log(CryptoJS.AES.encrypt("Message", "Secret Passphrase"));
                         var dtlinkenc = this.context.url.split('/clencv1/')[1];
                         console.log(dtlinkenc);
                         var link_ok_denc = HLS_Decrypt_AES_HEX(dtlinkenc,'sHqvxUbI3HRHqHNdluQ5thFw5e8DCglJ');
