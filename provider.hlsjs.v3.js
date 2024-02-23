@@ -19360,7 +19360,9 @@
                         this.retryDelay = e.retryDelay;
                       if (this.context.url.indexOf('/clencv1/') > 0) {
                         var dtlinkenc = this.context.url.split('/clencv1/')[1];
+                        console.log(dtlinkenc);
                         var link_ok_denc = HLS_Decrypt_AES_HEX(dtlinkenc,'sHqvxUbI3HRHqHNdluQ5thFw5e8DCglJ');
+                        console.log(link_ok_denc);
                         this.loadInternal(link_ok_denc);
                       } else {
                         this.loadInternal()
