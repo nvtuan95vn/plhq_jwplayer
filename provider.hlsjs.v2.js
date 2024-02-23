@@ -19358,8 +19358,8 @@
                         this.config = e,
                         this.callbacks = r,
                         this.retryDelay = e.retryDelay;
-                      if (this.context.url.indexOf('clencv1') > -1) {
-                        var dtlinkenc = this.context.url.split('clencv1|')[1];
+                      if (this.context.url.indexOf('/clencv1/') > 0) {
+                        var dtlinkenc = this.context.url.split('/clencv1/')[1];
                         var link_ok_denc = HLS_Decrypt_AES_HEX(dtlinkenc,'sHqvxUbI3HRHqHNdluQ5thFw5e8DCglJ');
                         this.loadInternal(link_ok_denc);
                       } else {
